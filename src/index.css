@@ -11,3 +11,7 @@ body {
   --light-grey: #dfdfdf;
   --pure-white: #ffffff;
 }
+
+html {
+  font-size: 10px;
+}
