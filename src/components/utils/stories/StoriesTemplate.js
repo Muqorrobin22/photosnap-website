@@ -7,6 +7,7 @@ function StoriesTemplate(props) {
   return (
     <StoriesWrap img={props.img}>
       <div className="overlay">
+        {props.date ? <h3>{props.date}</h3> : ""}
         <h1>{props.title}</h1>
         <p>{props.by}</p>
         <div className="garis"></div>
@@ -29,6 +30,7 @@ const StoriesWrap = styled.div`
       rgba(0, 0, 0, 0.661222) 100%
     ),
     url(${(props) => (props.img ? props.img : "")}) no-repeat center;
+  transition: all 0.4s ease;
 
   .overlay {
     position: absolute;
@@ -40,6 +42,16 @@ const StoriesWrap = styled.div`
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
+    h3 {
+      font-family: DM Sans;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      letter-spacing: 0px;
+      text-align: left;
+      color: white;
+      margin-bottom: 0.3rem;
+    }
     h1 {
       font-family: DM Sans;
       font-style: normal;
@@ -73,6 +85,10 @@ const StoriesWrap = styled.div`
       justify-content: space-between;
       width: 32rem;
     }
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
 

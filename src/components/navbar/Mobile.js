@@ -36,7 +36,7 @@ function Mobile() {
       </ul>
       <div className="garis"></div>
       <div>
-        <Button1> Get An Invite </Button1>
+        <Button1 to="/pricing"> Get An Invite </Button1>
       </div>
     </MenuWrap>
   );
