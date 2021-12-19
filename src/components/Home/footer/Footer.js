@@ -46,7 +46,7 @@ function Footer() {
         </li>
       </ul>
       <div className="button">
-        <Button4> Get an Invite </Button4>
+        <Button4 to="/pricing"> Get an Invite </Button4>
         <ArrowWhite />
       </div>
       <p>

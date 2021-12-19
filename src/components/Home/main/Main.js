@@ -19,7 +19,7 @@ function Main() {
           Then share your story with everyone.
         </p>
         <div>
-          <Button2> view the stories </Button2>
+          <Button2 to="/stories"> view the stories </Button2>
           <ArrowBlack />
         </div>
       </div>
@@ -34,7 +34,7 @@ function Main() {
           brands, businesses you name it.
         </p>
         <div>
-          <Button2> view the stories </Button2>
+          <Button2 to="/stories"> view the stories </Button2>
           <ArrowBlack />
         </div>
       </div>

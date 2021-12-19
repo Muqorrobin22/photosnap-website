@@ -11,7 +11,7 @@ function StoriesTemplate(props) {
         <p>{props.by}</p>
         <div className="garis"></div>
         <div>
-          <Button4> Read the story </Button4>
+          <Button4 to="/stories"> Read the story </Button4>
           <ArrowWhite />
         </div>
       </div>

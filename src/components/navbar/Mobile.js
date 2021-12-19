@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { Button1 } from "../utils/button/Button1";
 
 const isActive = ({ isActive }) => {
   return {
@@ -34,7 +35,9 @@ function Mobile() {
         </li>
       </ul>
       <div className="garis"></div>
-      <div>Button</div>
+      <div>
+        <Button1> Get An Invite </Button1>
+      </div>
     </MenuWrap>
   );
 }
@@ -42,14 +45,14 @@ function Mobile() {
 const MenuWrap = styled.div`
   position: absolute;
   width: 80%;
-  height: 25.3rem;
+  height: 28.3rem;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--pure-white);
   top: 7.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   animation: slideIn 0.2s ease-in forwards;
   ul {
@@ -74,7 +77,7 @@ const MenuWrap = styled.div`
   }
   .garis {
     height: 1px;
-    width: 31rem;
+    width: 90%;
     background-color: black;
     opacity: 0.25;
   }
