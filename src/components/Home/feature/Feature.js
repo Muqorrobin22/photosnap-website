@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import FeaturesTemplate from "../utils/features/FeaturesTemplate";
-import { ReactComponent as Svg1 } from "../../assets/features/desktop/responsive.svg";
-import { ReactComponent as Svg2 } from "../../assets/features/desktop/no-limit.svg";
-import { ReactComponent as Svg3 } from "../../assets/features/desktop/embed.svg";
+import FeaturesTemplate from "../../utils/features/FeaturesTemplate";
+import { ReactComponent as Svg1 } from "../../../assets/features/desktop/responsive.svg";
+import { ReactComponent as Svg2 } from "../../../assets/features/desktop/no-limit.svg";
+import { ReactComponent as Svg3 } from "../../../assets/features/desktop/embed.svg";
 
 function Feature() {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import images from "../../assets/home/mobile/create-and-share.jpg";
-import { Button4 } from "../utils/button/Button2";
-import ArrowWhite from "../utils/arrow/ArrowWhite";
+import images from "../../../assets/home/mobile/create-and-share.jpg";
+import { Button4 } from "../../utils/button/Button2";
+import ArrowWhite from "../../utils/arrow/ArrowWhite";
 
 function Header() {
   return (

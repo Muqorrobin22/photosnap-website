@@ -1,9 +1,9 @@
 import React from "react";
-import StoriesTemplate from "../utils/stories/StoriesTemplate";
-import mountain from "../../assets/stories/mobile/mountains.jpg";
-import cityScapes from "../../assets/stories/mobile/cityscapes.jpg";
-import days18 from "../../assets/stories/mobile/18-days-voyage.jpg";
-import architect from "../../assets/stories/mobile/architecturals.jpg";
+import StoriesTemplate from "../../utils/stories/StoriesTemplate";
+import mountain from "../../../assets/stories/mobile/mountains.jpg";
+import cityScapes from "../../../assets/stories/mobile/cityscapes.jpg";
+import days18 from "../../../assets/stories/mobile/18-days-voyage.jpg";
+import architect from "../../../assets/stories/mobile/architecturals.jpg";
 
 function Stories() {
   return (

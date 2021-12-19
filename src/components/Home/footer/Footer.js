@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { ReactComponent as Logo } from "../../assets/shared/desktop/logo.svg";
-import { ReactComponent as Instagram } from "../../assets/shared/desktop/instagram.svg";
-import { ReactComponent as Twitter } from "../../assets/shared/desktop/twitter.svg";
-import { ReactComponent as Fb } from "../../assets/shared/desktop/facebook.svg";
-import { Button4 } from "../utils/button/Button2";
-import ArrowWhite from "../utils/arrow/ArrowWhite";
+import { ReactComponent as Logo } from "../../../assets/shared/desktop/logo.svg";
+import { ReactComponent as Instagram } from "../../../assets/shared/desktop/instagram.svg";
+import { ReactComponent as Twitter } from "../../../assets/shared/desktop/twitter.svg";
+import { ReactComponent as Fb } from "../../../assets/shared/desktop/facebook.svg";
+import { Button4 } from "../../utils/button/Button2";
+import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -59,6 +59,7 @@ const FooterWrap = styled.footer`
   }
   ul {
     padding: 5rem 0 12rem 0;
+    text-align: center;
     li {
       list-style: none;
       padding-top: 2rem;

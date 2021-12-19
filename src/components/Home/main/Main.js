@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import images from "../../assets/home/mobile/beautiful-stories.jpg";
-import images2 from "../../assets/home/mobile/designed-for-everyone.jpg";
-import { Button2 } from "../utils/button/Button2";
-import ArrowBlack from "../utils/arrow/ArrowBlack";
+import images from "../../../assets/home/mobile/beautiful-stories.jpg";
+import images2 from "../../../assets/home/mobile/designed-for-everyone.jpg";
+import { Button2 } from "../../utils/button/Button2";
+import ArrowBlack from "../../utils/arrow/ArrowBlack";
 
 function Main() {
   return (
