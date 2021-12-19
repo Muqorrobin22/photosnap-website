@@ -1,19 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+
+const isActive = ({ isActive }) => {
+  return {
+    opacity: isActive ? "0.3" : "",
+  };
+};
 
 function Mobile() {
   return (
     <MenuWrap>
       <ul>
         <li>
-          <Link to="/stories">Stories</Link>
+          <NavLink to="/" style={isActive}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/features">Features</Link>
+          <NavLink to="/stories" style={isActive}>
+            Stories
+          </NavLink>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <NavLink to="/features" style={isActive}>
+            Features
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/pricing" style={isActive}>
+            Pricing
+          </NavLink>
         </li>
       </ul>
       <div className="garis"></div>
@@ -37,6 +54,7 @@ const MenuWrap = styled.div`
   animation: slideIn 0.2s ease-in forwards;
   ul {
     padding: 0;
+    text-align: center;
     li {
       list-style: none;
       padding-top: 2rem;

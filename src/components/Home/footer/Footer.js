@@ -6,7 +6,13 @@ import { ReactComponent as Twitter } from "../../../assets/shared/desktop/twitte
 import { ReactComponent as Fb } from "../../../assets/shared/desktop/facebook.svg";
 import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const isActive = ({ isActive }) => {
+  return {
+    opacity: isActive ? "0.3" : "",
+  };
+};
 
 function Footer() {
   return (
@@ -19,16 +25,24 @@ function Footer() {
       </div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" style={isActive}>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/stories">Stories</Link>
+          <NavLink to="/stories" style={isActive}>
+            Stories
+          </NavLink>
         </li>
         <li>
-          <Link to="/features">Features</Link>
+          <NavLink to="/features" style={isActive}>
+            Features
+          </NavLink>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <NavLink to="/pricing" style={isActive}>
+            Pricing
+          </NavLink>
         </li>
       </ul>
       <div className="button">
