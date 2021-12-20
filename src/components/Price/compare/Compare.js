@@ -5,7 +5,6 @@ import {
   ComparePlanTablet,
 } from "../../utils/compare/ComparePlan";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { ReactComponent as Checklist } from "../../../assets/pricing/desktop/check.svg";
 
