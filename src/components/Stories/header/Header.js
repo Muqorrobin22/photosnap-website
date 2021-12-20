@@ -2,21 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import images from "../../../assets/stories/mobile/moon-of-appalacia.jpg";
 import imagesTablet from "../../../assets/stories/tablet/moon-of-appalacia.jpg";
+import imagesDesktop from "../../../assets/stories/desktop/moon-of-appalacia.jpg";
 import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { useMediaQuery } from "react-responsive";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  let ImagesRendering;
+
+  if (isDesktop) {
+    ImagesRendering = <img src={imagesDesktop} alt={imagesDesktop} />;
+  } else if (isTablet) {
+    ImagesRendering = <img src={imagesTablet} alt={imagesTablet} />;
+  } else {
+    ImagesRendering = <img src={images} alt={images} />;
+  }
   return (
     <HeaderWrap>
-      <div className="img">
-        {isTablet ? (
-          <img src={imagesTablet} alt={imagesTablet} />
-        ) : (
-          <img src={images} alt={images} />
-        )}
-      </div>
+      <div className="img">{ImagesRendering}</div>
       <div className="info">
         <h6>LAST MONTH’S FEATURED STORY</h6>
         <h1>HAZY FULL MOON OF APPALACHIA </h1>

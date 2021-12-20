@@ -21,26 +21,29 @@ function Main() {
         />
         <h4 className={onState ? "onState" : ""}>Yearly</h4>
       </ToggleSwitch>
-      <CardMobile
-        price={!onState ? 19 : 19 * 10}
-        period={!onState ? "per month" : "per year"}
-        desc="Includes basic usage of our platform. Recommended for new and aspiring
+      <Plan className="plan">
+        <CardMobile
+          price={!onState ? 19 : 19 * 10}
+          period={!onState ? "per month" : "per year"}
+          desc="Includes basic usage of our platform. Recommended for new and aspiring
         photographers."
-        plan="basic"
-      />
-      <CardMobile
-        price={!onState ? 39 : 39 * 10}
-        period={!onState ? "per month" : "per year"}
-        desc="More advanced features available. Recommended for photography veterans and professionals."
-        plan="pro"
-        featured
-      />
-      <CardMobile
-        price={!onState ? 99 : 99 * 10}
-        period={!onState ? "per month" : "per year"}
-        desc="Additional features available such as more detailed metrics. Recommended for business owners."
-        plan="business"
-      />
+          plan="basic"
+        />
+        <CardMobile
+          price={!onState ? 39 : 39 * 10}
+          period={!onState ? "per month" : "per year"}
+          desc="More advanced features available. Recommended for photography veterans and professionals."
+          plan="pro"
+          featured
+          className="featured"
+        />
+        <CardMobile
+          price={!onState ? 99 : 99 * 10}
+          period={!onState ? "per month" : "per year"}
+          desc="Additional features available such as more detailed metrics. Recommended for business owners."
+          plan="business"
+        />
+      </Plan>
     </div>
   );
 }
@@ -63,6 +66,15 @@ const ToggleSwitch = styled.div`
 
   .onState {
     opacity: 1;
+  }
+`;
+
+const Plan = styled.div`
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    justify-content: center;
+    gap: 2rem;
   }
 `;
 

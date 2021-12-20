@@ -3,19 +3,24 @@ import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 import images from "../../../assets//pricing/mobile/hero.jpg";
 import imagesTablet from "../../../assets//pricing/tablet/hero.jpg";
+import imagesDesktop from "../../../assets//pricing/desktop/hero.jpg";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
 
+  let ImagesRendering;
+
+  if (isDesktop) {
+    ImagesRendering = <img src={imagesDesktop} alt={imagesDesktop} />;
+  } else if (isTablet) {
+    ImagesRendering = <img src={imagesTablet} alt={imagesTablet} />;
+  } else {
+    ImagesRendering = <img src={images} alt={images} />;
+  }
   return (
     <HeaderWrap>
-      <div className="img">
-        {isTablet ? (
-          <img src={imagesTablet} alt={imagesTablet} />
-        ) : (
-          <img src={images} alt={images} />
-        )}
-      </div>
+      <div className="img">{ImagesRendering}</div>
       <div className="info">
         <h1>PRICING</h1>
         <p>
@@ -84,6 +89,17 @@ const HeaderWrap = styled.header`
       }
       p {
         font-size: 1.4rem;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: minmax(61rem, 1fr) minmax(83rem, 1fr);
+
+    .img {
+      img {
+        height: 100%;
       }
     }
   }

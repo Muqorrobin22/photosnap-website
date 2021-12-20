@@ -3,11 +3,27 @@ import styled from "styled-components";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { Button4 } from "../../utils/button/Button2";
 import images from "../../../assets/shared/mobile/bg-beta.jpg";
+import imagesTablet from "../../../assets/shared/tablet/bg-beta.jpg";
+import imagesDesktop from "../../../assets/shared/desktop/bg-beta.jpg";
+import { useMediaQuery } from "react-responsive";
 
 function Beta() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  let ImagesRendering;
+
+  if (isDesktop) {
+    ImagesRendering = <img src={imagesDesktop} alt={imagesDesktop} />;
+  } else if (isTablet) {
+    ImagesRendering = <img src={imagesTablet} alt={imagesTablet} />;
+  } else {
+    ImagesRendering = <img src={images} alt={images} />;
+  }
+
   return (
     <BetaWrap>
-      <img src={images} alt={images} />
+      {ImagesRendering}
       <div className="overlay">
         <h1>We’re in beta. Get your invite today!</h1>
         <div>
@@ -56,7 +72,23 @@ const BetaWrap = styled.div`
 
   @media (min-width: 768px) {
     .overlay {
-      top: 50%;
+      top: 30%;
+      transform: translateY(-50%);
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      width: 88%;
+      h1 {
+        width: 40rem;
+        font-size: 4rem;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .overlay {
+      top: 20%;
       transform: translateY(-50%);
       left: 50%;
       transform: translateX(-50%);

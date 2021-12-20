@@ -126,6 +126,11 @@ const Wrap = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, 39rem);
     justify-content: space-evenly;
+    margin-top: -0.3rem;
+  }
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 

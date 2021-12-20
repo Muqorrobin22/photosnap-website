@@ -33,6 +33,7 @@ const CardMobileWrap = styled.div`
   flex-direction: column;
   margin-bottom: 2.4rem;
   color: ${(props) => (props.featured ? "white" : "black")};
+  transition: all 0.3s ease;
   h1 {
     font-family: DM Sans;
     font-size: 24px;
@@ -81,6 +82,14 @@ const CardMobileWrap = styled.div`
   .btn {
     display: flex;
     justify-content: center;
+  }
+
+  @media (min-width: 1440px) {
+    transform: scale(${(props) => (props.featured ? 1.1 : 1)});
+  }
+
+  &:hover {
+    transform: translateY(-10px);
   }
 `;
 

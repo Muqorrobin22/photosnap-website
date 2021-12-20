@@ -68,6 +68,11 @@ const FeatureWrap = styled.div`
     grid-template-columns: repeat(auto-fill, 34rem);
     justify-content: center;
   }
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
 `;
 
 export default Main;

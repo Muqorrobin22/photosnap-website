@@ -7,6 +7,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as Checklist } from "../../../assets/pricing/desktop/check.svg";
 
 export function Compare() {
   return (
@@ -17,51 +18,51 @@ export function Compare() {
       </div>
       <ComparePlanMobile
         title="UNLIMITED STORY POSTING"
-        check1={<FontAwesomeIcon icon={faCheck} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check1={<Checklist />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="UNLIMITED PHOTO UPLOAD"
-        check1={<FontAwesomeIcon icon={faCheck} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check1={<Checklist />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="EMBEDDING CUSTOM CONTENT"
         check1={<FontAwesomeIcon icon={faTimes} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="CUSTOMIZE METADATA"
         check1={<FontAwesomeIcon icon={faTimes} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="ADVANCED METRICS"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="PHOTO DOWNLOADS"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="SEARCH ENGINE INDEXING"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
       <ComparePlanMobile
         title="CUSTOM ANALYTICS"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
     </CompareWrap>
   );
@@ -100,51 +101,51 @@ export function CompareTablet() {
       </div>
       <ComparePlanTablet
         title="UNLIMITED STORY POSTING"
-        check1={<FontAwesomeIcon icon={faCheck} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check1={<Checklist />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="UNLIMITED PHOTO UPLOAD"
-        check1={<FontAwesomeIcon icon={faCheck} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check1={<Checklist />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="EMBEDDING CUSTOM CONTENT"
         check1={<FontAwesomeIcon icon={faTimes} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="CUSTOMIZE METADATA"
         check1={<FontAwesomeIcon icon={faTimes} />}
-        check2={<FontAwesomeIcon icon={faCheck} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check2={<Checklist />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="ADVANCED METRICS"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="PHOTO DOWNLOADS"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="SEARCH ENGINE INDEXING"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
       <ComparePlanTablet
         title="CUSTOM ANALYTICS"
         check1={<FontAwesomeIcon icon={faTimes} />}
         check2={<FontAwesomeIcon icon={faTimes} />}
-        check3={<FontAwesomeIcon icon={faCheck} />}
+        check3={<Checklist />}
       />
     </CompareTabletWrap>
   );
