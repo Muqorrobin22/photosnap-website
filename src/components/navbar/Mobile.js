@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button1 } from "../utils/button/Button1";
@@ -11,34 +11,37 @@ const isActive = ({ isActive }) => {
 
 function Mobile() {
   return (
-    <MenuWrap>
-      <ul>
-        <li>
-          <NavLink to="/" style={isActive}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/stories" style={isActive}>
-            Stories
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/features" style={isActive}>
-            Features
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/pricing" style={isActive}>
-            Pricing
-          </NavLink>
-        </li>
-      </ul>
-      <div className="garis"></div>
-      <div>
-        <Button1 to="/pricing"> Get An Invite </Button1>
-      </div>
-    </MenuWrap>
+    <Fragment>
+      <MenuWrap>
+        <ul>
+          <li>
+            <NavLink to="/" style={isActive}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/stories" style={isActive}>
+              Stories
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/features" style={isActive}>
+              Features
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/pricing" style={isActive}>
+              Pricing
+            </NavLink>
+          </li>
+        </ul>
+        <div className="garis"></div>
+        <div>
+          <Button1 to="/pricing"> Get An Invite </Button1>
+        </div>
+      </MenuWrap>
+      <Overlay></Overlay>
+    </Fragment>
   );
 }
 
@@ -54,6 +57,7 @@ const MenuWrap = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  z-index: 100;
   animation: slideIn 0.2s ease-in forwards;
   ul {
     padding: 0;
@@ -99,6 +103,18 @@ const MenuWrap = styled.div`
       visibility: hidden;
     }
   }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7.2rem;
+  bottom: 0;
+  height: 560rem;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 50;
 `;
 
 export default Mobile;

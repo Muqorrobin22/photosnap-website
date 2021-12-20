@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { ReactComponent as Logo } from "../../assets/shared/desktop/logo.svg";
 import { ReactComponent as Menu } from "../../assets/shared/mobile/menu.svg";
@@ -21,7 +22,11 @@ function Navbar() {
       ) : (
         <Close onClick={toggleMenuOpen} className="hidden"></Close>
       )}
-      {isMenuOpen && <Mobile />}
+      {isMenuOpen &&
+        ReactDOM.createPortal(
+          <Mobile />,
+          document.getElementById("overlay_background")
+        )}
     </NavWrap>
   );
 }
@@ -33,6 +38,7 @@ const NavWrap = styled.nav`
   align-items: center;
   padding: 0 2.4rem;
   justify-content: space-between;
+  z-index: 110;
 
   @media (min-width: 768px) {
     .hidden {
