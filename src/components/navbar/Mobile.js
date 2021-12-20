@@ -111,7 +111,7 @@ const Overlay = styled.div`
   right: 0;
   top: 7.2rem;
   bottom: 0;
-  height: 560rem;
+  height: 350rem;
   background-color: black;
   opacity: 0.5;
   z-index: 50;
