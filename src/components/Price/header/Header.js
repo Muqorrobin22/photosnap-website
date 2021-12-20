@@ -1,12 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 import images from "../../../assets//pricing/mobile/hero.jpg";
+import imagesTablet from "../../../assets//pricing/tablet/hero.jpg";
 
 function Header() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+
   return (
     <HeaderWrap>
       <div className="img">
-        <img src={images} alt={images} />
+        {isTablet ? (
+          <img src={imagesTablet} alt={imagesTablet} />
+        ) : (
+          <img src={images} alt={images} />
+        )}
       </div>
       <div className="info">
         <h1>PRICING</h1>
@@ -58,6 +66,25 @@ const HeaderWrap = styled.header`
       text-align: left;
       width: 31.8rem;
       padding: 1.6rem 0 2.3rem 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: minmax(49.5rem, 61rem) minmax(27.3rem, 83rem);
+    .img {
+      order: 2;
+    }
+
+    .info {
+      order: 1;
+      margin: 0;
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
     }
   }
 `;

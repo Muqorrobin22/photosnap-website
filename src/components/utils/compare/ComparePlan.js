@@ -56,3 +56,44 @@ const ComparePlanMobileWrap = styled.div`
     margin-bottom: 3rem;
   }
 `;
+
+export function ComparePlanTablet({ title, check1, check2, check3 }) {
+  return (
+    <ComparePlanTabletWrap>
+      <h2> {title} </h2>
+
+      <div className="compare_plan">
+        <div>{check1}</div>
+        <div>{check2}</div>
+        <div>{check3}</div>
+      </div>
+    </ComparePlanTabletWrap>
+  );
+}
+
+const ComparePlanTabletWrap = styled.div`
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    text-transform: uppercase;
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+  .compare_plan {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 2.4rem;
+    margin-bottom: 3rem;
+    width: 60%;
+  }
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+`;

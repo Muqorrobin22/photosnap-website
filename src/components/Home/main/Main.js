@@ -2,40 +2,65 @@ import React from "react";
 import styled from "styled-components";
 import images from "../../../assets/home/mobile/beautiful-stories.jpg";
 import images2 from "../../../assets/home/mobile/designed-for-everyone.jpg";
+import imagesTablet from "../../../assets/home/tablet/beautiful-stories.jpg";
+import images2Tablet from "../../../assets/home/tablet/designed-for-everyone.jpg";
+import imagesDesktop from "../../../assets/home/desktop/beautiful-stories.jpg";
+import images2Desktop from "../../../assets/home/desktop/designed-for-everyone.jpg";
 import { Button2 } from "../../utils/button/Button2";
 import ArrowBlack from "../../utils/arrow/ArrowBlack";
+import { useMediaQuery } from "react-responsive";
 
 function Main() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1440px)" });
+
+  let ImagesRendering;
+  let ImagesRendering2;
+
+  if (isDesktop) {
+    ImagesRendering = <img src={imagesDesktop} alt={imagesDesktop} />;
+  } else if (isTablet) {
+    ImagesRendering = <img src={imagesTablet} alt={imagesTablet} />;
+  } else {
+    ImagesRendering = <img src={images} alt={images} />;
+  }
+  if (isDesktop) {
+    ImagesRendering2 = <img src={images2Desktop} alt={images2Desktop} />;
+  } else if (isTablet) {
+    ImagesRendering2 = <img src={images2Tablet} alt={images2Tablet} />;
+  } else {
+    ImagesRendering2 = <img src={images2} alt={images2} />;
+  }
   return (
     <MainWrap>
-      <div className="img">
-        <img src={images} alt={images} />
-      </div>
-      <div className="info">
-        <h1>BEAUTIFUL STORIES EVERY TIME </h1>
-        <p>
-          We provide design templates to ensure your stories look terrific.
-          Easily add photos, text, embed maps and media from other networks.
-          Then share your story with everyone.
-        </p>
-        <div>
-          <Button2 to="/stories"> view the stories </Button2>
-          <ArrowBlack />
+      <div className="grid1">
+        <div className="img1">{ImagesRendering}</div>
+        <div className="info1">
+          <h1>BEAUTIFUL STORIES EVERY TIME </h1>
+          <p>
+            We provide design templates to ensure your stories look terrific.
+            Easily add photos, text, embed maps and media from other networks.
+            Then share your story with everyone.
+          </p>
+          <div>
+            <Button2 to="/stories"> view the stories </Button2>
+            <ArrowBlack />
+          </div>
         </div>
       </div>
-      <div className="img">
-        <img src={images2} alt={images2} />
-      </div>
-      <div className="info">
-        <h1>DESIGNED FOR EVERYONE </h1>
-        <p>
-          Photosnap can help you create stories that resonate with your
-          audience. Our tool is designed for photographers of all levels,
-          brands, businesses you name it.
-        </p>
-        <div>
-          <Button2 to="/stories"> view the stories </Button2>
-          <ArrowBlack />
+      <div className="grid2">
+        <div className="img2">{ImagesRendering2}</div>
+        <div className="info2">
+          <h1>DESIGNED FOR EVERYONE </h1>
+          <p>
+            Photosnap can help you create stories that resonate with your
+            audience. Our tool is designed for photographers of all levels,
+            brands, businesses you name it.
+          </p>
+          <div>
+            <Button2 to="/stories"> view the stories </Button2>
+            <ArrowBlack />
+          </div>
         </div>
       </div>
     </MainWrap>
@@ -43,13 +68,15 @@ function Main() {
 }
 
 const MainWrap = styled.main`
-  .img {
+  .img1,
+  .img2 {
     img {
       width: 100%;
     }
   }
 
-  .info {
+  .info1,
+  .info2 {
     height: 48rem;
     margin-top: -3rem;
     background-color: var(--pure-white);
@@ -86,6 +113,80 @@ const MainWrap = styled.main`
       display: flex;
       align-items: center;
       margin-left: -10rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid1 {
+      display: grid;
+      grid-template-columns: minmax(27.3rem, 83rem) minmax(49.5rem, 61rem);
+      .img1 {
+        order: 1;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .info1 {
+        margin-top: 0;
+        order: 2;
+        height: auto;
+        padding: 17.3rem 5.4rem;
+        h1 {
+          font-size: 4rem;
+          width: 38.7rem;
+        }
+        p {
+          font-size: 1.5rem;
+          width: 38.7rem;
+        }
+        div {
+          width: 38.7rem;
+          margin-left: 0;
+        }
+      }
+    }
+    .grid2 {
+      display: grid;
+      grid-template-columns: minmax(49.5rem, 61rem) minmax(27.3rem, 83rem);
+      .img2 {
+        order: 2;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .info2 {
+        margin-top: 0;
+        order: 1;
+        height: auto;
+        padding: 17.3rem 5.4rem;
+        h1 {
+          font-size: 4rem;
+          width: 38.7rem;
+        }
+        p {
+          font-size: 1.5rem;
+          width: 38.7rem;
+        }
+        div {
+          width: 38.7rem;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .grid2 {
+      display: grid;
+      grid-template-columns: minmax(61rem, 1fr) minmax(83rem, 1fr);
+
+      .img {
+        img {
+          height: 100%;
+        }
+      }
     }
   }
 `;

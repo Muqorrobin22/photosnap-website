@@ -38,6 +38,14 @@ const FeatureWrap = styled.div`
   section:not(:last-child) {
     margin-bottom: 5.6rem;
   }
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    align-items: baseline;
+    justify-content: center;
+    gap: 10px;
+  }
 `;
 
 export default Feature;

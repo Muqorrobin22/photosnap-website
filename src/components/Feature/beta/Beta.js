@@ -53,6 +53,23 @@ const BetaWrap = styled.div`
       align-items: center;
     }
   }
+
+  @media (min-width: 768px) {
+    .overlay {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+      transform: translateX(-50%);
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      width: 88%;
+      h1 {
+        width: 40rem;
+        font-size: 4rem;
+      }
+    }
+  }
 `;
 
 export default Beta;

@@ -29,9 +29,10 @@ const StoriesWrap = styled.div`
       rgba(0, 0, 0, 0.0001) 0.27%,
       rgba(0, 0, 0, 0.661222) 100%
     ),
-    url(${(props) => (props.img ? props.img : "")}) no-repeat center;
+    url(${(props) => (props.img ? props.img : "")}) no-repeat;
   transition: all 0.4s ease;
-
+  background-position: center;
+  background-size: cover;
   .overlay {
     position: absolute;
     width: 32rem;

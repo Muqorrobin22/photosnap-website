@@ -1,14 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 import images from "../../../assets/stories/mobile/moon-of-appalacia.jpg";
+import imagesTablet from "../../../assets/stories/tablet/moon-of-appalacia.jpg";
 import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
+import { useMediaQuery } from "react-responsive";
 
 function Header() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
   return (
     <HeaderWrap>
       <div className="img">
-        <img src={images} alt={images} />
+        {isTablet ? (
+          <img src={imagesTablet} alt={imagesTablet} />
+        ) : (
+          <img src={images} alt={images} />
+        )}
       </div>
       <div className="info">
         <h6>LAST MONTH’S FEATURED STORY</h6>
@@ -111,6 +118,31 @@ const HeaderWrap = styled.header`
       display: flex;
       align-items: center;
       margin-left: -10rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: relative;
+
+    .info {
+      position: absolute;
+      top: 10rem;
+      left: 0;
+      margin: 0;
+      background-color: transparent;
+      h1,
+      h6,
+      p {
+        width: 38.7rem;
+      }
+      h6 {
+        margin: 0;
+      }
+      div {
+        width: 38.7rem;
+        margin-left: 0;
+        justify-content: flex-start;
+      }
     }
   }
 `;

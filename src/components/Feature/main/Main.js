@@ -62,6 +62,12 @@ const FeatureWrap = styled.div`
   section:not(:last-child) {
     margin-bottom: 5.6rem;
   }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 34rem);
+    justify-content: center;
+  }
 `;
 
 export default Main;

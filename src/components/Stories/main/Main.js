@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import StoriesTemplate from "../../utils/stories/StoriesTemplate";
 import mountain from "../../../assets/stories/mobile/mountains.jpg";
 import cityScapes from "../../../assets/stories/mobile/cityscapes.jpg";
@@ -19,7 +20,7 @@ import land from "../../../assets/stories/mobile/land-of-dreams.jpg";
 
 function Main() {
   return (
-    <div>
+    <Wrap>
       <StoriesTemplate
         date="April 16th 2020"
         img={mountain}
@@ -116,8 +117,16 @@ function Main() {
         title="Land of Dreams"
         by="by William Malcolm"
       />
-    </div>
+    </Wrap>
   );
 }
+
+const Wrap = styled.div`
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 39rem);
+    justify-content: space-evenly;
+  }
+`;
 
 export default Main;

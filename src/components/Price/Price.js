@@ -4,15 +4,18 @@ import Navbar from "../navbar/Navbar";
 import Header from "./header/Header";
 import Main from "./main/Main";
 import Footer from "../Home/footer/Footer";
-import Compare from "./compare/Compare";
+import { useMediaQuery } from "react-responsive";
+import { Compare, CompareTablet } from "./compare/Compare";
 
 function Price() {
+  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+
   return (
     <div>
       <Navbar />
       <Header />
       <Main />
-      <Compare />
+      {isTablet ? <CompareTablet /> : <Compare />}
       <Beta />
       <Footer />
     </div>
