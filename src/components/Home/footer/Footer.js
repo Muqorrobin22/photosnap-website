@@ -19,7 +19,7 @@ function Footer() {
     <FooterWrap>
       <Logo fill="white" />
       <div className="social">
-        <Instagram />
+        <Instagram href="https://www.instagram.com/muqorrobinn__/" />
         <Twitter />
         <Fb />
       </div>
@@ -50,8 +50,9 @@ function Footer() {
         <ArrowWhite />
       </div>
       <p>
-        Copyright 2019 <a href="http://">&copy;Muqorrobin</a>. All Rights
-        Reserved
+        Copyright 2019{" "}
+        <a href="https://www.instagram.com/muqorrobinn__/">&copy;Muqorrobin</a>.
+        All Rights Reserved
       </p>
     </FooterWrap>
   );

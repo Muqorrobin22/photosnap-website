@@ -4,6 +4,7 @@ import images from "../../../assets/features/mobile/hero.jpg";
 import imagesTablet from "../../../assets/features/tablet/hero.jpg";
 import imagesDesktop from "../../../assets/features/desktop/hero.jpg";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -22,7 +23,13 @@ function Header() {
     <HeaderWrap>
       <div className="img">{ImagesRendering}</div>
       <div className="info">
-        <h1>FEATURES</h1>
+        <motion.h1
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: -500, opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
+          FEATURES
+        </motion.h1>
         <p>
           We make sure all of our features are designed to be loved by every
           aspiring and even professional photograpers who wanted to share their

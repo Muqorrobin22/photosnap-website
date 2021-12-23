@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function Button1({ children, to }) {
   return (
-    <ButtonWrap1>
+    <ButtonWrap1 whileHover={{ scale: 1.1 }}>
       <Link to={to}>{children}</Link>
     </ButtonWrap1>
   );
@@ -18,7 +19,7 @@ export function Button3({ children, to }) {
   );
 }
 
-const ButtonWrap1 = styled.button`
+const ButtonWrap1 = styled(motion.header)`
   font-family: DM Sans;
   font-size: 12px;
   font-style: normal;

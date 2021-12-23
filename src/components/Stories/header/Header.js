@@ -6,6 +6,7 @@ import imagesDesktop from "../../../assets/stories/desktop/moon-of-appalacia.jpg
 import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -24,8 +25,20 @@ function Header() {
     <HeaderWrap>
       <div className="img">{ImagesRendering}</div>
       <div className="info">
-        <h6>LAST MONTH’S FEATURED STORY</h6>
-        <h1>HAZY FULL MOON OF APPALACHIA </h1>
+        <motion.h6
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: -500, opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
+          LAST MONTH’S FEATURED STORY
+        </motion.h6>
+        <motion.h1
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: -500, opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
+          HAZY FULL MOON OF APPALACHIA{" "}
+        </motion.h1>
         <div className="info-2">
           <span>March 2nd 2020</span> &nbsp;
           <span>by John Appleseed</span>

@@ -6,6 +6,7 @@ import imagesDesktop from "../../../assets/home/desktop/create-and-share.jpg";
 import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -25,15 +26,29 @@ function Header() {
     <HeaderWrap>
       <div className="img">{ImagesRendering}</div>
       <div className="info">
-        <h1>Create and share your photo stories. </h1>
-        <p>
+        <motion.h1
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: -500, opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
+          Create and share your photo stories.{" "}
+        </motion.h1>
+        <motion.p
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: 500, opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
           Photosnap is a platform for photographers and visual storytellers. We
           make it easy to share photos, tell stories and connect with others.
-        </p>
-        <div>
+        </motion.p>
+        <motion.div
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: 500, opacity: 0 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
+        >
           <Button4 to="/pricing"> Get an Invite </Button4>
           <ArrowWhite />
-        </div>
+        </motion.div>
       </div>
     </HeaderWrap>
   );

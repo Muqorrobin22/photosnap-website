@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import images from "../../../assets//pricing/mobile/hero.jpg";
 import imagesTablet from "../../../assets//pricing/tablet/hero.jpg";
 import imagesDesktop from "../../../assets//pricing/desktop/hero.jpg";
+import { motion } from "framer-motion";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -22,7 +23,13 @@ function Header() {
     <HeaderWrap>
       <div className="img">{ImagesRendering}</div>
       <div className="info">
-        <h1>PRICING</h1>
+        <motion.h1
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: -500, opacity: 0 }}
+          transition={{ delay: 1 }}
+        >
+          PRICING
+        </motion.h1>
         <p>
           Create a your stories, Photosnap is a platform for photographers and
           visual storytellers. It’s the simple way to create and share your

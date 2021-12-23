@@ -7,11 +7,23 @@ import { ReactComponent as Close } from "../../assets/shared/mobile/close.svg";
 import Mobile from "./Mobile";
 import { NavLink } from "react-router-dom";
 import { Button1 } from "../utils/button/Button1";
+import { motion } from "framer-motion";
 
 const isActive = ({ isActive }) => {
   return {
     opacity: isActive ? "0.3" : "",
   };
+};
+
+const LinkVariants = {
+  visible: {
+    scale: 1.2,
+    opacity: 0.3,
+    transition: {
+      type: "spring",
+      stifness: 300,
+    },
+  },
 };
 
 function Navbar() {
@@ -36,37 +48,49 @@ function Navbar() {
           document.getElementById("overlay_background")
         )}
 
-      <div className="nav">
+      <motion.div
+        className="nav"
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: -500, opacity: 0 }}
+        transition={{ delay: 0.2 }}
+      >
         <ul>
-          <li>
+          <Li variants={LinkVariants} whileHover="visible">
             <NavLink to="/" style={isActive}>
               Home
             </NavLink>
-          </li>
-          <li>
+          </Li>
+          <Li variants={LinkVariants} whileHover="visible">
             <NavLink to="/stories" style={isActive}>
               Stories
             </NavLink>
-          </li>
-          <li>
+          </Li>
+          <Li variants={LinkVariants} whileHover="visible">
             <NavLink to="/features" style={isActive}>
               Features
             </NavLink>
-          </li>
-          <li>
+          </Li>
+          <Li variants={LinkVariants} whileHover="visible">
             <NavLink to="/pricing" style={isActive}>
               Pricing
             </NavLink>
-          </li>
+          </Li>
         </ul>
-      </div>
+      </motion.div>
 
-      <div className="nav">
+      <motion.div
+        className="nav"
+        animate={{ x: 0, opacity: 1 }}
+        initial={{ x: -500, opacity: 0 }}
+        transition={{ delay: 0.2 }}
+      >
         <Button1 to="/pricing"> Get An Invite </Button1>
-      </div>
+      </motion.div>
     </NavWrap>
   );
 }
+
+const Li = styled(motion.li)``;
 
 const NavWrap = styled.nav`
   height: 7.2rem;
