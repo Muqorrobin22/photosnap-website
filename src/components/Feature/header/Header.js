@@ -5,6 +5,7 @@ import imagesTablet from "../../../assets/features/tablet/hero.jpg";
 import imagesDesktop from "../../../assets/features/desktop/hero.jpg";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
+import Zoom from "react-reveal/Zoom";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -30,11 +31,13 @@ function Header() {
         >
           FEATURES
         </motion.h1>
-        <p>
-          We make sure all of our features are designed to be loved by every
-          aspiring and even professional photograpers who wanted to share their
-          stories.
-        </p>
+        <Zoom cascade left>
+          <p>
+            We make sure all of our features are designed to be loved by every
+            aspiring and even professional photograpers who wanted to share
+            their stories.
+          </p>
+        </Zoom>
       </div>
     </HeaderWrap>
   );

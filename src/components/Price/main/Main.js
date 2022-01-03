@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CardMobile } from "../../utils/card/Card";
 import Switch from "@mui/material/Switch";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 function Main() {
   const [onState, SetOn] = useState(false);
@@ -12,15 +13,17 @@ function Main() {
 
   return (
     <div>
-      <ToggleSwitch>
-        <h4 className={!onState ? "onState" : ""}>Monthly</h4>
-        <Switch
-          checked={onState}
-          onChange={setOnHandler}
-          inputProps={{ "aria-label": "controlled" }}
-        />
-        <h4 className={onState ? "onState" : ""}>Yearly</h4>
-      </ToggleSwitch>
+      <Slide left>
+        <ToggleSwitch>
+          <h4 className={!onState ? "onState" : ""}>Monthly</h4>
+          <Switch
+            checked={onState}
+            onChange={setOnHandler}
+            inputProps={{ "aria-label": "controlled" }}
+          />
+          <h4 className={onState ? "onState" : ""}>Yearly</h4>
+        </ToggleSwitch>
+      </Slide>
       <Plan className="plan">
         <CardMobile
           price={!onState ? 19 : 19 * 10}

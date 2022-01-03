@@ -2,21 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
+import Bounce from "react-reveal/Bounce";
+import LightSpeed from "react-reveal/LightSpeed";
 
 function StoriesTemplate(props) {
   return (
-    <StoriesWrap img={props.img}>
-      <div className="overlay">
-        {props.date ? <h3>{props.date}</h3> : ""}
-        <h1>{props.title}</h1>
-        <p>{props.by}</p>
-        <div className="garis"></div>
-        <div>
-          <Button4 to="/stories"> Read the story </Button4>
-          <ArrowWhite />
+    <Bounce>
+      <StoriesWrap img={props.img}>
+        <div className="overlay">
+          <Bounce cascade>{props.date ? <h3>{props.date}</h3> : ""}</Bounce>
+          <Bounce cascade left>
+            <h1>{props.title}</h1>
+            <p>{props.by}</p>
+          </Bounce>
+          <div className="garis"></div>
+          <LightSpeed left>
+            <div>
+              <Button4 to="/stories"> Read the story </Button4>
+              <ArrowWhite />
+            </div>
+          </LightSpeed>
         </div>
-      </div>
-    </StoriesWrap>
+      </StoriesWrap>
+    </Bounce>
   );
 }
 

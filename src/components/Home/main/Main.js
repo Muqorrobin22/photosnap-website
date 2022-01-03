@@ -9,6 +9,8 @@ import images2Desktop from "../../../assets/home/desktop/designed-for-everyone.j
 import { Button2 } from "../../utils/button/Button2";
 import ArrowBlack from "../../utils/arrow/ArrowBlack";
 import { useMediaQuery } from "react-responsive";
+import Zoom from "react-reveal/Zoom";
+import Flip from "react-reveal/Flip";
 
 function Main() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -34,33 +36,45 @@ function Main() {
   return (
     <MainWrap>
       <div className="grid1">
-        <div className="img1">{ImagesRendering}</div>
+        <Zoom>
+          <div className="img1">{ImagesRendering}</div>
+        </Zoom>
         <div className="info1">
-          <h1>BEAUTIFUL STORIES EVERY TIME </h1>
-          <p>
-            We provide design templates to ensure your stories look terrific.
-            Easily add photos, text, embed maps and media from other networks.
-            Then share your story with everyone.
-          </p>
-          <div>
-            <Button2 to="/stories"> view the stories </Button2>
-            <ArrowBlack />
-          </div>
+          <Zoom cascade right>
+            <h1>BEAUTIFUL STORIES EVERY TIME </h1>
+            <p>
+              We provide design templates to ensure your stories look terrific.
+              Easily add photos, text, embed maps and media from other networks.
+              Then share your story with everyone.
+            </p>
+          </Zoom>
+          <Zoom right>
+            <div>
+              <Button2 to="/stories"> view the stories </Button2>
+              <ArrowBlack />
+            </div>
+          </Zoom>
         </div>
       </div>
       <div className="grid2">
-        <div className="img2">{ImagesRendering2}</div>
+        <Zoom>
+          <div className="img2">{ImagesRendering2}</div>
+        </Zoom>
         <div className="info2">
-          <h1>DESIGNED FOR EVERYONE </h1>
-          <p>
-            Photosnap can help you create stories that resonate with your
-            audience. Our tool is designed for photographers of all levels,
-            brands, businesses you name it.
-          </p>
-          <div>
-            <Button2 to="/stories"> view the stories </Button2>
-            <ArrowBlack />
-          </div>
+          <Zoom cascade left>
+            <h1>DESIGNED FOR EVERYONE </h1>
+            <p>
+              Photosnap can help you create stories that resonate with your
+              audience. Our tool is designed for photographers of all levels,
+              brands, businesses you name it.
+            </p>
+          </Zoom>
+          <Zoom>
+            <div>
+              <Button2 to="/stories"> view the stories </Button2>
+              <ArrowBlack />
+            </div>
+          </Zoom>
         </div>
       </div>
     </MainWrap>

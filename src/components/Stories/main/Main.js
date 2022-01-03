@@ -17,6 +17,7 @@ import milky from "../../../assets/stories/mobile/milky-way.jpg";
 import dark from "../../../assets/stories/mobile/dark-forest.jpg";
 import somwarpet from "../../../assets/stories/mobile/somwarpet.jpg";
 import land from "../../../assets/stories/mobile/land-of-dreams.jpg";
+import Bounce from "react-reveal/Bounce";
 
 function Main() {
   return (

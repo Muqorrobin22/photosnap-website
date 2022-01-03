@@ -7,6 +7,7 @@ import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
+import Zoom from "react-reveal/Zoom";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -24,7 +25,9 @@ function Header() {
 
   return (
     <HeaderWrap>
-      <div className="img">{ImagesRendering}</div>
+      <Zoom>
+        <div className="img">{ImagesRendering}</div>
+      </Zoom>
       <div className="info">
         <motion.h1
           animate={{ x: 0, opacity: 1 }}

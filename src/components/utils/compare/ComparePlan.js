@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import Zoom from "react-reveal/Zoom";
 
 export function ComparePlanMobile({ title, check1, check2, check3 }) {
   return (
-    <ComparePlanMobileWrap>
-      <h2> {title} </h2>
-      <div className="compare">
-        <h3>Basic</h3>
-        <h3>Pro</h3>
-        <h3>Business</h3>
-      </div>
-      <div className="compare_plan">
-        <div>{check1}</div>
-        <div>{check2}</div>
-        <div>{check3}</div>
-      </div>
-    </ComparePlanMobileWrap>
+    <Zoom>
+      <ComparePlanMobileWrap>
+        <h2> {title} </h2>
+        <div className="compare">
+          <h3>Basic</h3>
+          <h3>Pro</h3>
+          <h3>Business</h3>
+        </div>
+        <div className="compare_plan">
+          <div>{check1}</div>
+          <div>{check2}</div>
+          <div>{check3}</div>
+        </div>
+      </ComparePlanMobileWrap>
+    </Zoom>
   );
 }
 
@@ -59,15 +62,17 @@ const ComparePlanMobileWrap = styled.div`
 
 export function ComparePlanTablet({ title, check1, check2, check3 }) {
   return (
-    <ComparePlanTabletWrap>
-      <h2> {title} </h2>
+    <Zoom>
+      <ComparePlanTabletWrap>
+        <h2> {title} </h2>
 
-      <div className="compare_plan">
-        <div>{check1}</div>
-        <div>{check2}</div>
-        <div>{check3}</div>
-      </div>
-    </ComparePlanTabletWrap>
+        <div className="compare_plan">
+          <div>{check1}</div>
+          <div>{check2}</div>
+          <div>{check3}</div>
+        </div>
+      </ComparePlanTabletWrap>
+    </Zoom>
   );
 }
 

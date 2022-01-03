@@ -6,6 +6,7 @@ import images from "../../../assets/shared/mobile/bg-beta.jpg";
 import imagesTablet from "../../../assets/shared/tablet/bg-beta.jpg";
 import imagesDesktop from "../../../assets/shared/desktop/bg-beta.jpg";
 import { useMediaQuery } from "react-responsive";
+import Bounce from "react-reveal/Bounce";
 
 function Beta() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -25,7 +26,9 @@ function Beta() {
     <BetaWrap>
       {ImagesRendering}
       <div className="overlay">
-        <h1>We’re in beta. Get your invite today!</h1>
+        <Bounce cascade bottom>
+          <h1>We’re in beta. Get your invite today!</h1>
+        </Bounce>
         <div>
           <Button4 to="/pricing">Get an Invite</Button4>
           <ArrowWhite />

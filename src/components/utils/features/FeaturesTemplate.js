@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Bounce from "react-reveal/Bounce";
 
 function FeaturesTemplate({ svg, title, text }) {
   return (
-    <FeatureWrap>
-      <div className="gambar">{svg}</div>
-      <h3> {title} </h3>
-      <p> {text} </p>
-    </FeatureWrap>
+    <Bounce>
+      <FeatureWrap>
+        <div className="gambar">{svg}</div>
+        <h3> {title} </h3>
+        <p> {text} </p>
+      </FeatureWrap>
+    </Bounce>
   );
 }
 

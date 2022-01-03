@@ -1,24 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import { Button1, Button3 } from "../button/Button1";
+import Bounce from "react-reveal/Bounce";
 
 export function CardMobile({ period, price, plan, desc, featured }) {
   return (
-    <CardMobileWrap featured={featured}>
-      <h1>{plan}</h1>
-      <p>{desc}</p>
-      <div className="price">
-        <h2>{price}.00</h2>
-        <h4>{period}</h4>
-      </div>
-      <div className="btn">
-        {featured ? (
-          <Button3 to="pricing">Pick Plan</Button3>
-        ) : (
-          <Button1 to="pricing">Pick Plan</Button1>
-        )}
-      </div>
-    </CardMobileWrap>
+    <Bounce>
+      <CardMobileWrap featured={featured}>
+        <h1>{plan}</h1>
+        <p>{desc}</p>
+        <div className="price">
+          <h2>{price}.00</h2>
+          <h4>{period}</h4>
+        </div>
+        <div className="btn">
+          {featured ? (
+            <Button3 to="pricing">Pick Plan</Button3>
+          ) : (
+            <Button1 to="pricing">Pick Plan</Button1>
+          )}
+        </div>
+      </CardMobileWrap>
+    </Bounce>
   );
 }
 

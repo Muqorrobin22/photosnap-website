@@ -5,30 +5,39 @@ import cityScapes from "../../../assets/stories/mobile/cityscapes.jpg";
 import days18 from "../../../assets/stories/mobile/18-days-voyage.jpg";
 import architect from "../../../assets/stories/mobile/architecturals.jpg";
 import styled from "styled-components";
+import Bounce from "react-reveal/Bounce";
 
 function Stories() {
   return (
     <Wrap>
-      <StoriesTemplate
-        img={mountain}
-        title="the mountain"
-        by="by John Applesed"
-      />
-      <StoriesTemplate
-        img={cityScapes}
-        title="Sunset Cityscapes"
-        by="by Benjamin Cruz"
-      />
-      <StoriesTemplate
-        img={days18}
-        title="18 Days Voyage"
-        by="by Alexei Borodin"
-      />
-      <StoriesTemplate
-        img={architect}
-        title="Architecturals"
-        by="by Samantha Brooke"
-      />
+      <Bounce>
+        <StoriesTemplate
+          img={mountain}
+          title="the mountain"
+          by="by John Applesed"
+        />
+      </Bounce>
+      <Bounce>
+        <StoriesTemplate
+          img={cityScapes}
+          title="Sunset Cityscapes"
+          by="by Benjamin Cruz"
+        />
+      </Bounce>
+      <Bounce>
+        <StoriesTemplate
+          img={days18}
+          title="18 Days Voyage"
+          by="by Alexei Borodin"
+        />
+      </Bounce>
+      <Bounce>
+        <StoriesTemplate
+          img={architect}
+          title="Architecturals"
+          by="by Samantha Brooke"
+        />
+      </Bounce>
     </Wrap>
   );
 }

@@ -5,6 +5,7 @@ import images from "../../../assets//pricing/mobile/hero.jpg";
 import imagesTablet from "../../../assets//pricing/tablet/hero.jpg";
 import imagesDesktop from "../../../assets//pricing/desktop/hero.jpg";
 import { motion } from "framer-motion";
+import Bounce from "react-reveal/Bounce";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -30,11 +31,13 @@ function Header() {
         >
           PRICING
         </motion.h1>
-        <p>
-          Create a your stories, Photosnap is a platform for photographers and
-          visual storytellers. It’s the simple way to create and share your
-          photos.
-        </p>
+        <Bounce cascade left>
+          <p>
+            Create a your stories, Photosnap is a platform for photographers and
+            visual storytellers. It’s the simple way to create and share your
+            photos.
+          </p>
+        </Bounce>
       </div>
     </HeaderWrap>
   );

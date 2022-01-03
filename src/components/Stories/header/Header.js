@@ -7,6 +7,7 @@ import { Button4 } from "../../utils/button/Button2";
 import ArrowWhite from "../../utils/arrow/ArrowWhite";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
+import Zoom from "react-reveal/Zoom";
 
 function Header() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
@@ -39,20 +40,26 @@ function Header() {
         >
           HAZY FULL MOON OF APPALACHIA{" "}
         </motion.h1>
-        <div className="info-2">
-          <span>March 2nd 2020</span> &nbsp;
-          <span>by John Appleseed</span>
-        </div>
-        <p>
-          The dissected plateau area, while not actually made up of geological
-          mountains, is popularly called "mountains," especially in eastern
-          Kentucky and West Virginia, and while the ridges are not high, the
-          terrain is extremely rugged.
-        </p>
-        <div>
-          <Button4 to="/pricing"> Read the Story </Button4>
-          <ArrowWhite />
-        </div>
+        <Zoom cascade left>
+          <div className="info-2">
+            <span>March 2nd 2020</span> &nbsp;
+            <span>by John Appleseed</span>
+          </div>
+        </Zoom>
+        <Zoom cascade left>
+          <p>
+            The dissected plateau area, while not actually made up of geological
+            mountains, is popularly called "mountains," especially in eastern
+            Kentucky and West Virginia, and while the ridges are not high, the
+            terrain is extremely rugged.
+          </p>
+        </Zoom>
+        <Zoom>
+          <div>
+            <Button4 to="/pricing"> Read the Story </Button4>
+            <ArrowWhite />
+          </div>
+        </Zoom>
       </div>
     </HeaderWrap>
   );
