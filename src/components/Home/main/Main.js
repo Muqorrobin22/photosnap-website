@@ -10,7 +10,6 @@ import { Button2 } from "../../utils/button/Button2";
 import ArrowBlack from "../../utils/arrow/ArrowBlack";
 import { useMediaQuery } from "react-responsive";
 import Zoom from "react-reveal/Zoom";
-import Flip from "react-reveal/Flip";
 
 function Main() {
   const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
