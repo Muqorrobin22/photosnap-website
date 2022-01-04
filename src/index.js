@@ -8,6 +8,7 @@ import Feature from "./components/Feature/Feature";
 import Price from "./components/Price/Price";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./index.css";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 const RoutePath = () => {
   const Location = useLocation();
@@ -20,12 +21,14 @@ const RoutePath = () => {
         key={Location.key}
         unmountOnExit
       >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="stories" element={<Story />} />
-          <Route path="features" element={<Feature />} />
-          <Route path="pricing" element={<Price />} />
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="stories" element={<Story />} />
+            <Route path="features" element={<Feature />} />
+            <Route path="pricing" element={<Price />} />
+          </Routes>
+        </ScrollToTop>
       </CSSTransition>
     </TransitionGroup>
   );
